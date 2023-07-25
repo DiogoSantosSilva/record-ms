@@ -8,8 +8,10 @@ services:
       - "8000:8000"
     depends_on:
       - db
-    environments:
-      - DATABASE_URL=postgresql://guardia:guardia123:5433/ms_record
+    environment:
+      - DATABASE_URL=postgresql://postgres:guardia123@localhost:5433/ms_record
+      - HOST=0.0.0.0
+      - PORT=8080
 
   db:
     image: postgres

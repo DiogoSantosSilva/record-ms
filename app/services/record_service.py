@@ -28,7 +28,7 @@ class RecordService:
             self.db.rollback()
             raise HTTPException(status_code=500, detail="Internal server error")
 
-    def get_record(self, record_id: int) -> Record | None:
+    def get_record(self, record_id: int):
         return self.db.query(Record).filter(Record.id == record_id).first()
 
     def update_record(self, record_id: int, record: RecordSchemaInput):
