@@ -9,13 +9,13 @@ services:
     depends_on:
       - db
     environments:
-      - DATABASE_URL=postgresql://guardia:guardia123/postgres
+      - DATABASE_URL=postgresql://guardia:guardia123:5433/ms_record
 
   db:
     image: postgres
     ports:
-      - "5432:5432"
+      - "5432:5433"
     environment:
       - POSTGRES_USER=guardia
       - POSTGRES_PASSWORD=guardia123
-      - POSTGRES_DB=postgres
+      - POSTGRES_DB=ms_record
