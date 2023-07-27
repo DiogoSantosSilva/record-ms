@@ -1,19 +1,19 @@
-from typing import List
+from typing import List, Optional
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends,  Query
 from sqlalchemy.orm import Session
 
+from app import get_db
 from app.models.record import RecordSchemaInput, RecordSchemaOutput
 from app.services.record_service import RecordService
-from app import get_db
 
 router = APIRouter(prefix="/records", tags=["records"])
 
 
 @router.get("/", response_model=List[RecordSchemaOutput])
-def get_all_records(user_id: int = None, db: Session = Depends(get_db)):
+def get_all_records(user_ids: List[int] = Query(None), db: Session = Depends(get_db)):
     record_service = RecordService(db)
-    db_records = record_service.get_records(user_id)
+    db_records = record_service.get_records(user_ids)
     return db_records
 
 

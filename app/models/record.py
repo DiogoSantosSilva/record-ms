@@ -26,15 +26,20 @@ class RecordSchemaInput(BaseModel):
     tag: str
     tipo_registro: str
 
+    class Config:
+        orm_mode = True
+        arbitrary_types_allowed = True
+
 
 class RecordSchemaOutput(BaseModel):
-    id: int
-    user_id: int
-    titulo: str
-    mensagem: str
-    topico: str
-    tag: str
-    tipo_registro: str
-    fl_active: bool
-    created: str
-    updated: str
+    id: int = None
+    user_id: int = None
+    titulo: str = None
+    mensagem: str = None
+    topico: str = None
+    tag: str = None
+    tipo_registro: str = None
+    fl_active: bool = False
+
+    class Config:
+        orm_mode = True
