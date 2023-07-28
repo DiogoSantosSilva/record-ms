@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2175e611-f719-45b8-a1f6-a9a355ef141a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/record_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/record_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/record.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/record.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/record_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/record_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

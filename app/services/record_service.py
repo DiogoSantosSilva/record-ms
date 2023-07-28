@@ -1,6 +1,7 @@
 from typing import Optional, List
 
 from fastapi import HTTPException
+from sqlalchemy import desc
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 from sqlalchemy.orm.exc import NoResultFound
@@ -17,8 +18,7 @@ class RecordService:
 
         if user_ids is not None:
             query = query.filter(Record.user_id.in_(user_ids))
-
-        return query.all()
+        return query.order_by(desc(Record.created)).all()
 
     def create_record(self, record):
         try:

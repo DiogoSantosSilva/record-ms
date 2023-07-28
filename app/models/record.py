@@ -13,6 +13,7 @@ class Record(Base):
     topico = Column(String)
     tag = Column(String)
     tipo_registro = Column(String)
+    data = Column(String, nullable=True)
     fl_active = Column(Boolean, default=True)
     created = Column(DateTime, default=func.now())
     updated = Column(DateTime, default=func.now(), onupdate=func.now())
@@ -24,6 +25,7 @@ class RecordSchemaInput(BaseModel):
     mensagem: str
     topico: str
     tag: str
+    data: str
     tipo_registro: str
 
     class Config:
@@ -38,6 +40,7 @@ class RecordSchemaOutput(BaseModel):
     mensagem: str = None
     topico: str = None
     tag: str = None
+    data: str = None
     tipo_registro: str = None
     fl_active: bool = False
 
